@@ -9,7 +9,7 @@ if ($update['message']['out'] == true) {
         $reply = "<b>Invaid syntax</b>\nUse: <code>.whois InputPeer(username, user_id)</code>";
         if (isset($arg[1])) {
             try {
-                $info = $MadelineProto->get_full_info($arg[1],['async' => false]);
+                $info = $MadelineProto->getFullInfo($arg[1],['async' => false]);
                 $name = "";
                 logger($info,5);
                 if (empty($info["full"]["user"]["last_name"])) {
